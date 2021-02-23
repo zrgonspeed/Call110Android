@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/popwindow_bg">
+
+    <!--最外层背景-->
+    <View
+        android:id="@+id/v_remove_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_view_dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!--顶部标题背景-->
+    <View
+        android:id="@+id/v_remove_title_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_view_remove_title"
+        app:layout_constraintBottom_toBottomOf="@id/v_remove_bg"
+        app:layout_constraintEnd_toEndOf="@id/v_remove_bg"
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintStart_toStartOf="@id/v_remove_bg"
+        app:layout_constraintTop_toTopOf="@id/v_remove_bg"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!--图标-->
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/logo_ec_remove"
+        app:layout_constraintBottom_toBottomOf="@id/v_remove_title_bg"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/v_remove_title_bg"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toStartOf="@id/v_remove_title_bg"
+        app:layout_constraintTop_toTopOf="@id/v_remove_title_bg"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <!--"修改紧急联系人"  标题-->
+    <TextView
+        android:id="@+id/tv_remove_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="删除紧急联系人"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/v_remove_title_bg"
+        app:layout_constraintEnd_toEndOf="@id/v_remove_title_bg"
+        app:layout_constraintStart_toStartOf="@id/v_remove_title_bg"
+        app:layout_constraintTop_toTopOf="@id/v_remove_title_bg" />
+
+    <!--删除面板的内容-->
+    <TextView
+        android:id="@+id/tv_remove_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text='确定要删除"张日光"吗?'
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/v_remove_bg"
+        app:layout_constraintEnd_toEndOf="@+id/v_remove_bg"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/v_remove_bg"
+        app:layout_constraintTop_toTopOf="@+id/v_remove_bg"
+        app:layout_constraintVertical_bias="0.467" />
+
+
+    <Button
+        android:id="@+id/bt_remove_confirm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/selector_bt_confirm"
+        android:text="确定"
+
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/v_remove_bg"
+        app:layout_constraintEnd_toEndOf="@+id/v_remove_bg"
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/v_remove_bg"
+        app:layout_constraintTop_toTopOf="@+id/v_remove_bg"
+
+        app:layout_constraintVertical_bias="0.95"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <Button
+        android:id="@+id/bt_remove_cancel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/selector_bt_cancel"
+        android:text="取消"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/v_remove_bg"
+        app:layout_constraintEnd_toEndOf="@+id/v_remove_bg"
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="@+id/v_remove_bg"
+        app:layout_constraintTop_toTopOf="@+id/v_remove_bg"
+
+        app:layout_constraintVertical_bias="0.95"
+        app:layout_constraintWidth_percent="0.35" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,218 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--百度地图-->
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" />
+
+    <!--第一个约束布局-->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <View
+            android:id="@+id/v_map_top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <!--返回 箭头-->
+        <top.cnzrg.call110.view.MyImageView
+            android:id="@+id/iv_arror_back"
+            style="@style/arror_left"
+            app:layout_constraintBottom_toBottomOf="@id/v_map_top"
+            app:layout_constraintEnd_toEndOf="@id/v_map_top"
+            app:layout_constraintStart_toStartOf="@id/v_map_top"
+            app:layout_constraintTop_toTopOf="@id/v_map_top" />
+
+        <!--版本信息-->
+        <!--
+                <TextView
+                    android:id="@+id/tv_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="v6.0.0"
+                    android:textColor="#6c000000"
+                    android:textSize="22dp" />
+        -->
+
+        <!--当前时间-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="地图定位"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/v_map_top"
+            app:layout_constraintEnd_toEndOf="@id/v_map_top"
+            app:layout_constraintStart_toStartOf="@id/v_map_top"
+            app:layout_constraintTop_toTopOf="@id/v_map_top" />
+
+
+        <!--详细信息的背景-->
+        <View
+            android:id="@+id/v_details_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/shape_view_map_block"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.19"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.14"
+            app:layout_constraintWidth_percent="0.95" />
+
+        <!--地理位置1-->
+        <TextView
+            android:id="@+id/tv_location_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="桂林市雁山区柘木镇卫家渡村"
+            android:textColor="#202020"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/v_details_bg"
+            app:layout_constraintEnd_toEndOf="@id/v_details_bg"
+            app:layout_constraintStart_toStartOf="@id/v_details_bg"
+            app:layout_constraintTop_toTopOf="@id/v_details_bg"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <!--地理位置2-->
+        <TextView
+            android:id="@+id/tv_location_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="在广西师范大学附属外国语学校-西2门附近"
+            android:textColor="#202020"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="@id/v_details_bg"
+            app:layout_constraintEnd_toEndOf="@id/v_details_bg"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@id/v_details_bg"
+            app:layout_constraintTop_toBottomOf="@id/tv_location_1"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <!--经纬度刷新次数 content-->
+        <TextView
+            android:id="@+id/tv_long_lati_refresh_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#beffffff"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/v_details_bg"
+            app:layout_constraintEnd_toEndOf="@id/v_details_bg"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@id/v_details_bg"
+            app:layout_constraintTop_toTopOf="@id/v_details_bg"
+            app:layout_constraintVertical_bias="0.71" />
+
+        <!--经纬度的背景-->
+
+        <!--经度标题-->
+        <TextView
+            android:id="@+id/tv_longitude_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="经度:"
+            android:textColor="#80202020"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="@id/v_details_bg"
+            app:layout_constraintEnd_toEndOf="@id/v_details_bg"
+            app:layout_constraintHorizontal_bias="0.076"
+            app:layout_constraintStart_toStartOf="@id/v_details_bg"
+            app:layout_constraintTop_toTopOf="@id/v_details_bg"
+            app:layout_constraintVertical_bias="0.715" />
+
+        <!--经度内容-->
+        <TextView
+            android:id="@+id/tv_longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="110.123456"
+            android:textColor="#80202020"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="@id/v_details_bg"
+            app:layout_constraintEnd_toEndOf="@id/v_details_bg"
+            app:layout_constraintHorizontal_bias="0.039"
+            app:layout_constraintStart_toEndOf="@id/tv_longitude_title"
+            app:layout_constraintTop_toTopOf="@id/v_details_bg"
+            app:layout_constraintVertical_bias="0.715" />
+
+        <!--经纬度view中间的的分割线-->
+
+        <!--纬度标题-->
+        <TextView
+            android:id="@+id/tv_latitude_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="纬度:"
+            android:textColor="#80202020"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="@id/v_details_bg"
+            app:layout_constraintEnd_toEndOf="@id/v_details_bg"
+            app:layout_constraintHorizontal_bias="0.613"
+            app:layout_constraintStart_toStartOf="@id/v_details_bg"
+            app:layout_constraintTop_toTopOf="@id/v_details_bg"
+            app:layout_constraintVertical_bias="0.715" />
+
+        <!--纬度内容-->
+        <TextView
+            android:id="@+id/tv_latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25.123456"
+            android:textColor="#80202020"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="@id/v_details_bg"
+            app:layout_constraintEnd_toEndOf="@id/v_details_bg"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toEndOf="@+id/tv_latitude_title"
+            app:layout_constraintTop_toTopOf="@id/v_details_bg"
+            app:layout_constraintVertical_bias="0.715" />
+
+        <!--其他信息内容的背景-->
+
+
+        <!--定位方式  title-->
+
+        <!--定位方式  content-->
+        <TextView
+            android:id="@+id/tv_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XX定位"
+            android:textColor="#80202020"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/v_details_bg"
+            app:layout_constraintEnd_toEndOf="@+id/v_details_bg"
+            app:layout_constraintStart_toStartOf="@+id/v_details_bg"
+            app:layout_constraintTop_toTopOf="@+id/v_details_bg"
+            app:layout_constraintVertical_bias="0.965" />
+
+        <!--网络类型  title-->
+
+        <!--网络类型  content-->
+
+
+        <!--最近一条报警记录的标题-->
+
+        <!--最近一条报警记录的时间-->
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

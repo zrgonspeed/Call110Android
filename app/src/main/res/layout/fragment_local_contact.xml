@@ -1,0 +1,68 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e7e7">
+
+    <!--顶部标题背景-->
+    <View
+        android:id="@+id/v_local_contact_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <!--返回 箭头-->
+    <top.cnzrg.call110.view.MyImageView
+        android:id="@+id/iv_arror_back"
+        style="@style/arror_left"
+        app:layout_constraintBottom_toBottomOf="@id/v_local_contact_top"
+        app:layout_constraintEnd_toEndOf="@id/v_local_contact_top"
+        app:layout_constraintStart_toStartOf="@id/v_local_contact_top"
+        app:layout_constraintTop_toTopOf="@id/v_local_contact_top" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="本地联系人"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/v_local_contact_top"
+        app:layout_constraintEnd_toEndOf="@id/v_local_contact_top"
+        app:layout_constraintStart_toStartOf="@id/v_local_contact_top"
+        app:layout_constraintTop_toTopOf="@id/v_local_contact_top" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_local_contact"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/v_local_contact_bottom"
+        app:layout_constraintTop_toBottomOf="@id/v_local_contact_top"></android.support.v7.widget.RecyclerView>
+
+    <!--底部背景-->
+    <View
+        android:id="@+id/v_local_contact_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.1" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="请选择联系人作为紧急联系人"
+        android:textColor="#ffffff"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/v_local_contact_bottom"
+        app:layout_constraintEnd_toEndOf="@+id/v_local_contact_bottom"
+        app:layout_constraintStart_toStartOf="@+id/v_local_contact_bottom"
+        app:layout_constraintTop_toTopOf="@+id/v_local_contact_bottom" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/popwindow_bg">
+
+    <!--最外层背景-->
+    <View
+        android:id="@+id/v_add_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_view_dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!--顶部标题背景-->
+    <View
+        android:id="@+id/v_add_title_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_view_ec_add_title"
+        app:layout_constraintBottom_toBottomOf="@id/v_add_bg"
+        app:layout_constraintEnd_toEndOf="@id/v_add_bg"
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintStart_toStartOf="@id/v_add_bg"
+        app:layout_constraintTop_toTopOf="@id/v_add_bg"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.8" />
+
+
+    <!--图标-->
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/logo_ec_add_"
+        app:layout_constraintBottom_toBottomOf="@id/v_add_title_bg"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/v_add_title_bg"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toStartOf="@id/v_add_title_bg"
+        app:layout_constraintTop_toTopOf="@id/v_add_title_bg"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <!--"添加紧急联系人"  标题-->
+    <TextView
+        android:id="@+id/tv_add_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加紧急联系人"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/v_add_title_bg"
+        app:layout_constraintEnd_toEndOf="@id/v_add_title_bg"
+        app:layout_constraintStart_toStartOf="@id/v_add_title_bg"
+        app:layout_constraintTop_toTopOf="@id/v_add_title_bg" />
+
+    <!--"姓名"  标题-->
+    <TextView
+        android:id="@+id/tv_add_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="姓名"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/v_add_bg"
+        app:layout_constraintEnd_toEndOf="@+id/v_add_bg"
+        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintStart_toStartOf="@+id/v_add_bg"
+        app:layout_constraintTop_toTopOf="@+id/v_add_bg"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <!--"姓名"  输入框-->
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/v_add_bg"
+        app:layout_constraintEnd_toEndOf="@+id/v_add_bg"
+        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintStart_toStartOf="@+id/v_add_bg"
+        app:layout_constraintTop_toTopOf="@+id/v_add_bg"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintWidth_percent="0.5" />
+
+
+    <!--"手机号"  标题-->
+    <TextView
+        android:id="@+id/tv_add_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="手机号"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/v_add_bg"
+        app:layout_constraintEnd_toEndOf="@+id/v_add_bg"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/v_add_bg"
+        app:layout_constraintTop_toTopOf="@+id/v_add_bg"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <!--"手机号"  输入框-->
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/v_add_bg"
+        app:layout_constraintEnd_toEndOf="@+id/v_add_bg"
+        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintStart_toStartOf="@+id/v_add_bg"
+        app:layout_constraintTop_toTopOf="@+id/v_add_bg"
+        app:layout_constraintVertical_bias="0.602"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <Button
+        android:id="@+id/bt_add_confirm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/selector_bt_confirm"
+        android:text="确定"
+
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/v_add_bg"
+        app:layout_constraintEnd_toEndOf="@+id/v_add_bg"
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/v_add_bg"
+        app:layout_constraintTop_toTopOf="@+id/v_add_bg"
+
+        app:layout_constraintVertical_bias="0.95"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <Button
+        android:id="@+id/bt_add_cancel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/selector_bt_cancel"
+        android:text="取消"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/v_add_bg"
+        app:layout_constraintEnd_toEndOf="@+id/v_add_bg"
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="@+id/v_add_bg"
+        app:layout_constraintTop_toTopOf="@+id/v_add_bg"
+
+        app:layout_constraintVertical_bias="0.95"
+        app:layout_constraintWidth_percent="0.35" />
+</android.support.constraint.ConstraintLayout>

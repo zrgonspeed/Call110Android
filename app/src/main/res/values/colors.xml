@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tab_checked">#dcdcdc</color>
+    <color name="tab_no_checked">#F3F3F3</color>
+
+    <color name="tab_text_color_no_checked">#949494</color>
+    <color name="tab_text_color_checked">#0099ff</color>
+
+    <color name="app_bg">#000000</color>
+    <color name="popwindow_bg">#cd000000</color>
+
+</resources>

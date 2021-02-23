@@ -1,0 +1,51 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e7e7">
+
+    <!--顶部标题背景-->
+    <View
+        android:id="@+id/v_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <!--返回 箭头-->
+    <top.cnzrg.call110.view.MyImageView
+        android:id="@+id/iv_arror_back"
+        style="@style/arror_left"
+        app:layout_constraintBottom_toBottomOf="@id/v_top"
+        app:layout_constraintEnd_toEndOf="@id/v_top"
+        app:layout_constraintStart_toStartOf="@id/v_top"
+        app:layout_constraintTop_toTopOf="@id/v_top" />
+
+    <!--顶部标题文字-->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="说明"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/v_top"
+        app:layout_constraintEnd_toEndOf="@id/v_top"
+        app:layout_constraintStart_toStartOf="@id/v_top"
+        app:layout_constraintTop_toTopOf="@id/v_top" />
+
+    <!--可折叠扩展的控件-->
+    <ExpandableListView
+        android:layoutDirection="rtl"
+        android:id="@+id/elv_help"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v_top">
+    </ExpandableListView>
+
+</android.support.constraint.ConstraintLayout>

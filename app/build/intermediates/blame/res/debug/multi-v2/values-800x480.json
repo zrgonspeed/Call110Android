@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "E:\\other\\AndroidPro\\Call110Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-800x480\\values-800x480.xml",
+            "map": [
+                {
+                    "source": "E:\\other\\AndroidPro\\Call110Android\\app\\src\\main\\res\\values-800x480\\dimens.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "40",
+                        "endOffsets": "93"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "40",
+                        "endOffsets": "91"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--返回箭头的样式-->
+    <style name="arror_left">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:src">@drawable/arror_left</item>
+
+        <item name="layout_constraintDimensionRatio">1:1</item>
+        <item name="layout_constraintHeight_percent">0.06</item>
+        <item name="layout_constraintHorizontal_bias">0.042</item>
+        <item name="layout_constraintVertical_bias">0.55</item>
+
+    </style>
+
+    <!-- PopupWindow弹出/隐藏动画 -->
+    <style name="MyPopupWindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/dialog_show</item>
+        <item name="android:windowExitAnimation">@anim/dialog_hidden</item>
+    </style>
+
+
+    <!--APP启动会有白屏-->
+    <!-- 应用去掉头部，保留新样式，比如输入框不是方框而是一条线. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowNoTitle">true</item>
+
+    </style>
+
+    <!--启动时的短暂白屏换成黑屏-->
+    <style name="splashTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowBackground">@color/app_bg</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>
